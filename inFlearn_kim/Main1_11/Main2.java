@@ -11,10 +11,11 @@ public class Main2 {
 
     private static String Solution(String str) {
         int count = 1;
+        str += " ";
         char[] strList = str.toCharArray();
         StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < str.length() - 1; i++) {
+        for (int i = 0; i < str.length() -1; i++) {
             if (strList[i] == strList[i + 1]) {
                 count++;
             } else {
