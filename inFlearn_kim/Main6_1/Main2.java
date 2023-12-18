@@ -18,17 +18,17 @@ public class Main2 {
 
     private static int[] solution(int n, int[] list) {
 
-        int minNumber = Integer.MAX_VALUE;
 
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if (minNumber > list[j]) {
-                    minNumber = list[i];
+            int minIndex = i;
+            for (int j = i + 1; j < n; j++) {
+                if (list[j] < list[minIndex]) {
+                    minIndex = j;
                 }
             }
             int temp = list[i];
-            list[i] = minNumber;
-            minNumber = temp;
+            list[i] = list[minIndex];
+            list[minIndex] = temp;
 
         }
         return list;
