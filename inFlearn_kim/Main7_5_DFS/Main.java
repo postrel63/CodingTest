@@ -25,7 +25,7 @@ package inFlearn_kim.Main7_5_DFS;
 class Node {
 
     int Data;
-    Node lt, rt;
+    Node2 lt, rt;
 
     public Node(int val) {
         Data = val;
@@ -34,9 +34,9 @@ class Node {
 }
 
 public class Main {
-    Node root;
+    Node2 root;
 
-    public void DFS(Node root) {
+    public void DFS(Node2 root) {
         if (root == null) return;
         DFS(root.lt);
         DFS(root.rt);
@@ -46,13 +46,13 @@ public class Main {
 
     public static void main(String[] args) {
         Main tree = new Main();
-        tree.root = new Node(1);
-        tree.root.lt = new Node(2);
-        tree.root.rt = new Node(3);
-        tree.root.lt.lt = new Node(4);
-        tree.root.lt.rt = new Node(5);
-        tree.root.rt.lt = new Node(6);
-        tree.root.rt.rt = new Node(7);
+        tree.root = new Node2(1);
+        tree.root.lt = new Node2(2);
+        tree.root.rt = new Node2(3);
+        tree.root.lt.lt = new Node2(4);
+        tree.root.lt.rt = new Node2(5);
+        tree.root.rt.lt = new Node2(6);
+        tree.root.rt.rt = new Node2(7);
         tree.DFS(tree.root);
 
     }
