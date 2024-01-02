@@ -1,6 +1,5 @@
 package Baekjoon.B1890;
 
-import com.sun.prism.shader.Solid_LinearGradient_PAD_AlphaTest_Loader;
 
 import java.io.BufferedReader;
 import java.io.IOException;
